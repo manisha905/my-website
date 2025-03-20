@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const changeProfilePhoto = document.getElementById('changeProfilePhoto');
     const profilePhoto = document.getElementById('profilePhoto');
 
-    // Sample data
+
     let poems = [];
     let users = [];
     let loggedInUser = null;
 
-    // Display sections based on link clicks
+
     loginLink.addEventListener('click', () => {
         document.getElementById('login').style.display = 'block';
         document.getElementById('signup').style.display = 'none';
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('login').style.display = 'none';
     });
 
-    // Handle profile photo change
+ 
     changeProfilePhoto.addEventListener('change', () => {
         const file = changeProfilePhoto.files[0];
         const reader = new FileReader();
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle sign up
+   
     signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const username = document.getElementById('signupUsername').value;
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle login
+   
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = document.getElementById('loginEmail').value;
@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle logout
     logoutLink.addEventListener('click', () => {
         loggedInUser = null;
         document.getElementById('upload').style.display = 'none';
@@ -142,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showAlert('Logged out', 'info');
     });
 
-    // Handle profile update
+
     profileForm.addEventListener('submit', (e) => {
         e.preventDefault();
         if (loggedInUser) {
@@ -152,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle poem upload
+
     uploadForm.addEventListener('submit', (e) => {
         e.preventDefault();
         if (!loggedInUser) {
@@ -172,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showAlert('Poem uploaded successfully', 'success');
     });
 
-    // Display poems
+   
     function displayPoems(poems, container) {
         container.innerHTML = '';
         poems.forEach(poem => {
@@ -188,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             container.appendChild(poemDiv);
 
-            // Handle like button
+        
             poemDiv.querySelector('.likeButton').addEventListener('click', () => {
                 if (!loggedInUser) {
                     showAlert('Please log in to like a poem', 'warning');
@@ -200,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle search
+    
     searchButton.addEventListener('click', () => {
         const query = searchInput.value.toLowerCase();
         const results = poems.filter(poem => 
@@ -224,15 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Infinite scroll
     window.addEventListener('scroll', () => {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             // Load more poems
             displayPoems(poems, poemContainer);
         }
     });
-
-    // Alert function
     function showAlert(message, type) {
         const alertDiv = document.createElement('div');
         alertDiv.className = `alert ${type}`;
@@ -247,7 +243,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 3000);
     }
-
-    // Initial display
     displayPoems(poems, poemContainer);
 });
