@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Sharing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mending Souls</h1>
+        <nav>
+            <ul>
+                <li>
+                    <input type="text" id="searchInput" placeholder="Search by title, genre, or author...">
+                    <button id="searchButton">Search</button>
+                </li>
+                <li><a href="#profile" id="profileLink"><img src="default_profile.png" alt="Profile" class="profile-pic"></a></li>
+                <li><a href="#login" id="loginLink">Login</a></li>
+                <li><a href="#signup" id="signupLink">Sign Up</a></li>
+                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="signup" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="username" required><br>
+            
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" name="email" required><br>
+            
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="password" required><br>
+            
+            <label for="signupBio">Bio:</label>
+            <textarea id="signupBio" name="bio"></textarea><br>
+            
+            <label for="signupProfilePhoto">Profile Photo:</label>
+            <input type="file" id="signupProfilePhoto" name="profilePhoto"><br>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <section id="login" style="display: none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="email" required><br>
+            
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required><br>
+            
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="profile" style="display: none;">
+        <h2>Your Profile</h2>
+        <div id="profilePhotoContainer">
+            <img src="default_profile.png" alt="Profile" class="profile-pic" id="profilePhoto">
+            <input type="file" id="changeProfilePhoto">
+        </div>
+        <form id="profileForm">
+            <label for="profileUsername">Username:</label>
+            <input type="text" id="profileUsername" name="username" required><br>
+            
+            <label for="profileBio">Bio:</label>
+            <textarea id="profileBio" name="bio"></textarea><br>
+            
+            <button type="submit">Update Profile</button>
+        </form>
+        <button id="createPoemButton">Create Your Own Poem</button>
+    </section>
+    
+    <section id="upload" style="display: none;">
+        <h2>Upload Your Poem</h2>
+        <form id="uploadForm">
+            <label for="title">Poem Title:</label>
+            <input type="text" id="title" name="title" required><br>
+            
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required><br>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br>
+            
+            <label for="content">Poem Content:</label>
+            <textarea id="content" name="content" required></textarea><br>
+            
+            <button type="submit">Upload Poem</button>
+        </form>
+    </section>
+
+    <section id="explore">
+        <div id="poemContainer">
+        
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
