@@ -26,19 +26,19 @@
     <section id="signup" style="display: none;">
         <h2>Sign Up</h2>
         <form id="signupForm">
-            <label for="signupUsername">Username:</label>
+            <label for="signupUsername"><span style="color:slateblue;">Username:</span><span style="color:red">*</span></label>
             <input type="text" id="signupUsername" name="username" required><br>
             
-            <label for="signupEmail">Email:</label>
+            <label for="signupEmail"><span style="color:slateblue;">Email:</span><span style="color:red">*</span></label>
             <input type="email" id="signupEmail" name="email" required><br>
             
-            <label for="signupPassword">Password:</label>
+            <label for="signupPassword"><span style="color:slateblue;">Password:</span><span style="color:red">*</span></label>
             <input type="password" id="signupPassword" name="password" required><br>
             
-            <label for="signupBio">Bio:</label>
+            <label for="signupBio"><span style="color:slateblue;">Bio:</span><span style="color:red">*</span></label>
             <textarea id="signupBio" name="bio"></textarea><br>
             
-            <label for="signupProfilePhoto">Profile Photo:</label>
+            <label for="signupProfilePhoto"><span style="color:slateblue;">Profile Photo:</span><span style="color:red">*</span></label>
             <input type="file" id="signupProfilePhoto" name="profilePhoto"><br>
             
             <button type="submit">Sign Up</button>
@@ -48,10 +48,10 @@
     <section id="login" style="display: none;">
         <h2>Login</h2>
         <form id="loginForm">
-            <label for="loginEmail">Email:</label>
+            <label for="loginEmail"><span style="color:slateblue;">Email:</span><span style="color:red">*</span></label>
             <input type="email" id="loginEmail" name="email" required><br>
             
-            <label for="loginPassword">Password:</label>
+            <label for="loginPassword"><span style="color:slateblue;">Password:</span><span style="color:red">*</span></label>
             <input type="password" id="loginPassword" name="password" required><br>
             
             <button type="submit">Login</button>
@@ -61,14 +61,14 @@
     <section id="profile" style="display: none;">
         <h2>Your Profile</h2>
         <div id="profilePhotoContainer">
-            <img src="default_profile.png" alt="Profile" class="profile-pic" id="profilePhoto">
+            <img src="https://i.pinimg.com/736x/a8/4a/a3/a84aa310f33862e53c30f55bdf94b013.jpg" alt="Profile" class="profile-pic" id="profilePhoto">
             <input type="file" id="changeProfilePhoto">
         </div>
         <form id="profileForm">
-            <label for="profileUsername">Username:</label>
+            <label for="profileUsername"><span style="color:slateblue;">Username:</span><span style="color:red">*</span></label>
             <input type="text" id="profileUsername" name="username" required><br>
             
-            <label for="profileBio">Bio:</label>
+            <label for="profileBio"><span style="color:slateblue;">Bio:</span></label>
             <textarea id="profileBio" name="bio"></textarea><br>
             
             <button type="submit">Update Profile</button>
@@ -79,16 +79,16 @@
     <section id="upload" style="display: none;">
         <h2>Upload Your Poem</h2>
         <form id="uploadForm">
-            <label for="title">Poem Title:</label>
+            <label for="title"><span style="color:slateblue;">Poem Title:</span><span style="color:red">*</span></label>
             <input type="text" id="title" name="title" required><br>
             
-            <label for="genre">Genre:</label>
+            <label for="genre"><span style="color:slateblue;">Genre:</span><span style="color:red">*</span></label>
             <input type="text" id="genre" name="genre" required><br>
             
-            <label for="description">Description:</label>
+            <label for="description"><span style="color:slateblue;">Description:</span></label>
             <textarea id="description" name="description"></textarea><br>
             
-            <label for="content">Poem Content:</label>
+            <label for="content"><span style="color:slateblue;">Poem Content:</span><span style="color:red">*</span></label>
             <textarea id="content" name="content" required></textarea><br>
             
             <button type="submit">Upload Poem</button>
